@@ -13,6 +13,8 @@ function updateTimeBlocks() {
   $(".time-block").each(function () {
     let dataNumber = $(this).find(".description").data("number");
 
+    $(this).removeClass("past present future");
+
     if (dataNumber < currentTime) {
       $(this).find(".description").addClass("past");
     } else if (dataNumber === currentTime) {
